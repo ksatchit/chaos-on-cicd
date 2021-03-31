@@ -30,8 +30,6 @@ spec:
         volumeMounts:
         - mountPath: /etc/prometheus
           name: config-volume
-        - mountPath: /etc/prometheus-rules
-          name: alertrules-volume
       serviceAccount: prometheus
       serviceAccountName: prometheus
       volumes:
@@ -39,7 +37,3 @@ spec:
           defaultMode: 420
           name: prometheus-configmap
         name: config-volume
-      - configMap:
-          defaultMode: 420
-          name: prometheus-alertrules
-        name: alertrules-volume
