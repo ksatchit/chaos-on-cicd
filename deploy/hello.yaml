@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: helloservice
   annotations: 
-    litmuschaos.io/gitops: "true"
-    litmuschaos.io/workflow: "e9e13f91-5a01-4668-8356-582a30e0bf5f"
+    litmuschaos.io/gitops: true
+    litmuschaos.io/workflow: e9e13f91-5a01-4668-8356-582a30e0bf5f
 spec:
   selector:
     matchLabels:
@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: ksatchit/test-k8s-app:sha-9acb441
+        image: ksatchit/test-k8s-app:sha-fdefafb
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
