@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: ksatchit/test-k8s-app:sha-826fa1d
+        image: ksatchit/test-k8s-app:sha-9acb441
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
